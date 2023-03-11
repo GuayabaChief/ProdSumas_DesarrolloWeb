@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Producto de dos números mediante sumas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/plantillaEjercicios.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Producto de dos números mediante sumas</h1>
+            <input type="text" id="val1" placeholder="Numero 1">
+            <label> X </label>
+            <input type="text" id="val2" placeholder="Numero 2">
+            <br>
+            <input type="button" value="Producto" onclick="producto()">
+        </div>
+        <h2>Producto:</h2>
+        <div id="resultado">
+            
+        </div>
+        <footer class="footer">
+             <table>
+                <tr>
+                    <td>
+                        <p style="color: white; text-align: left; font-size: 14;">
+                            Sitio creado por Gerardo Su&aacute;rez Santos <br>
+                            Derechos reservados 2023 &reg;
+                        </p>
+                    </td>
+                    <td>
+                        <a href="http://www.escom.ipn.mx/"><img src="assets/img/logo.png" alt="Logo IPN y ESCOM" style="width: 50%; height: 50%"/><a/>
+                    </td>
+                    <td>
+                        <p style="color: white; text-align: left; font-size: 14;">
+                            ESCOM IPN, Unidad Profesional Adolfo López Mateos, Av. Juan de Dios Bátiz, Nueva Industrial Vallejo, Gustavo A. Madero, 07320 Ciudad de México, CDMX
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </body>
+</html>
+<script type="text/javascript">
+    function producto(){
+        var num1 = parseInt(document.getElementById("val1").value);
+        var num2 = parseInt(document.getElementById("val2").value);
+        var prod = 0;
+        
+        while(num2 != 0){
+            prod = prod + num1;
+            num2 = num2 - 1;
+        }
+        document.getElementById("resultado").innerHTML = prod;
+    }
+</script>
